@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      boxShadow:{
+        '3xl': 'rgba(0, 0, 0, 0.3) 0px 9px 24px, rgba(0, 0, 0, 0.22) 0px 10px 8px'
+      },
+      flex: {
+        full: "0 0 100%",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

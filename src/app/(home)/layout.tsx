@@ -1,4 +1,4 @@
-import { Header } from "@/components/shared/Header";
+import { Header } from "@/components/shared/navbar/Header";
 
 export default function HomeLayout({
   children,
@@ -6,9 +6,9 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main>
+    <body className="">
       <Header />
       {children}
-    </main>
+    </body>
   );
 }
