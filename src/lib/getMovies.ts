@@ -22,29 +22,15 @@ async function fetchFromTMDB( url: URL, cacheTime?: number){
   const data = ( await response.json() ) as SearchResults;
 
   return data
-
 }
 
-// REFACTOR
-
-export async function getUpComingMovies(){
-  const url = new URL("https://api.themoviedb.org/3/movie/upcoming");
+export async function getMoviesByParam( param: string){
+  const url = new URL(`https://api.themoviedb.org/3/movie/${param}`);
   const data = await fetchFromTMDB(url);
 
-  return data.results;
+  return data.results
 }
-export async function getTopRatedMovies(){
-  const url = new URL("https://api.themoviedb.org/3/movie/top_rated");
-  const data = await fetchFromTMDB(url);
 
-  return data.results;
-}
-export async function getPopularMovies(){
-  const url = new URL("https://api.themoviedb.org/3/movie/popular");
-  const data = await fetchFromTMDB(url);
-
-  return data.results;
-}
 export async function getDiscoverMovies(id?: string, keywords?: string){
   const url = new URL("https://api.themoviedb.org/3/discover/movie");
 

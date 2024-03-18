@@ -18,11 +18,11 @@ export const CarouselsBanner = ( {movies}: { movies: Movie[]}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration:100}, [Autoplay()])
 
   return (
-    <div className="relative max-h-[760px] cursor-pointer overflow-hidden -z-10 -mt-20" ref={emblaRef}>
+    <div className="relative max-h-[760px] cursor-pointer overflow-hidden -z-10  text-[#f9f9f9]" ref={emblaRef}>
       <div className="flex">
         {
           movies.map( movie => (
-            <div key={movie.id} className="flex-full min-w-0 relative object-cover z-[-2]">
+            <div key={movie.id} className="flex-full min-w-0 relative object-cover">
               <Image
                 key={movie.id}
                 src={getImagePath(movie.backdrop_path, true)}
@@ -35,12 +35,12 @@ export const CarouselsBanner = ( {movies}: { movies: Movie[]}) => {
                   <h2 className="text-xl sm:text-5xl font-bold max-w-xl z-50">{movie.title}</h2>
                   <p className="text-xs sm:text-lg max-w-xl line-clamp-3 z-50">{movie.overview}</p>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-gray-900/25 to-white dark:to-[#1A1C29] -z-10"/>
               </div>
             </div>
           ))
         }
       </div>
+      <div className="h-full w-full absolute inset-0 bg-gradient-to-b from-gray-200/0 via-gray-900/25 to-[#1A1C29] z-10"/>
 
     </div>
 

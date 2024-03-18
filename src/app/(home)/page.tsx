@@ -1,14 +1,15 @@
 
-import { getPopularMovies, getTopRatedMovies, getUpComingMovies } from "@/lib";
+import { getMoviesByParam } from "@/lib";
 
 import { MovieCarousel } from "@/components";
 import { CarouselBannerWrapper } from "@/components/shared/Carousel/CarouselBannerWrapper";
+import { Movie } from "@/interfaces";
 
 export default async function Home() {
 
-  const upcomingMovies = await getUpComingMovies()
-  const topRateMovies = await getTopRatedMovies();
-  const popularMovies = await getPopularMovies();
+  const upcomingMovies = await getMoviesByParam('upcoming')
+  const topRateMovies = await getMoviesByParam('top_rated')
+  const popularMovies = await getMoviesByParam('popular')
 
 
   return (
