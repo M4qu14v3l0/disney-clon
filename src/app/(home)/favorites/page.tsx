@@ -13,7 +13,7 @@ export default function Favorites() {
       {
         favorites.length === 0
         ? 
-        <WithoutFavorites />
+          <WithoutFavorites />
         :
         <>
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold px-4">My Favorites </h1>
