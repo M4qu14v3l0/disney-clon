@@ -12,5 +12,5 @@ export { Button } from "./ui/button";
 export { DropdownMenu } from "./ui/dropdown-menu";
 
 // Root
-export { ThemeToggler } from "./ThemeToggler";
-export { ThemeProvider } from "./ThemeProvider";
+export { ThemeToggler } from "./Provider/ThemeToggler";
+export { ThemeProvider } from "./Provider/ThemeProvider";
