@@ -26,10 +26,6 @@ export const Header = () => {
               priority
             />
         </Link>
-        <Link href={"/search"} className="flex items-center gap-1">
-          <MagnifyingGlassIcon className="w-5 h-5"/>
-          <p className="hidden sm:block">Search</p>
-        </Link>
         <Link href={"/favorites"} className="flex items-center gap-1">
           <PlusIcon className="w-5 h-5"/>
           <p className="hidden sm:block">My List</p>
